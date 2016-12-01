@@ -1,0 +1,8 @@
+<%= form_for @changeset, category_path(@conn, :update, @category), fn f -> %>
+    <div class="form-group">
+        <%= text_input f, :name, placeholder: "Name", class: "form-control" %>
+        <%= error_tag f, :name %>
+    </div>
+
+    <%= submit "Save Category", class: "btn btn-primary" %>
+<% end %>
